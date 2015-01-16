@@ -76,6 +76,31 @@
 		<version>18.0</version>
 	</dependency>
   </dependencies>
- 
+  
+  <repositories>
+        <repository>
+            <id>osc</id>
+            <url>http://maven.oschina.net/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+  </repositories>
+  
+  <pluginRepositories>
+        <pluginRepository>
+            <id>osc</id>
+            <url>http://maven.oschina.net/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+  </pluginRepositories>
   
 </project>

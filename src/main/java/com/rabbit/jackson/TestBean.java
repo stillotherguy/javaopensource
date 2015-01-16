@@ -1,4 +1,4 @@
-package com.rabbit;
+package com.rabbit.jackson;
 
 import com.google.common.base.MoreObjects;
 

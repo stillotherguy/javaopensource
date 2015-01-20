@@ -1,4 +1,4 @@
-package com.rabbit.reorder;
+package com.rabbit.concurrent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,8 +33,7 @@ public class ReorderTest {
 					//2初次读一个包含final域的对象的引用，与随后初次读这个final域，这两个操作之间不能重排序。 
 					/**
 					 * 曾经天真的以为JDK8已经修复了上述问题，其实没有，是因为看错了逻辑，如果initialCapacity == 0时确实没有上面的问题，
-					 * 因为EMPTY_ELEMENTDATA是一个final类型的依据JMM可以保证，调用add的线程在拿到的arraylist的引用是已经初始化好的，加上
-					 * volatile即可避免此错误，利用了volatile的获取语义
+					 * 因为EMPTY_ELEMENTDATA是一个final类型的依据JMM可以保证，调用add的线程在拿到的arraylist的引用是已经初始化好的
 					 */
 					List<String> local = l;
 					l = new ArrayList<String>(1024);

@@ -1,4 +1,4 @@
-package com.rabbit.reorder;
+package com.rabbit.concurrent;
 
 import org.junit.Test;
 

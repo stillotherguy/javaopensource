@@ -26,7 +26,7 @@ public class VolatileCachedFactorizer extends GenericServlet {
 		BigInteger[] factors = cache.getFactors(i);
 		if(factors == null) {
 			factors = null;//factor(i);
-			cache = new OneValueCache(i, factors);  //这一步利用了volatile获取语义以及不可变对象来确保原子性
+			cache = new OneValueCache(i, factors);  //这一步利用了volatile获取语义以及不可变对象来确保线程安全和可见性
 		}
 		
 		//encodeIntoResponse(res, factors);

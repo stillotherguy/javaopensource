@@ -24,6 +24,7 @@ public class ReorderShowCase {
 			@Override
 			public void run(){
 				if(flag){
+					@SuppressWarnings("unused")
 					int e = d;
 				}
 			}
@@ -35,6 +36,7 @@ public class ReorderShowCase {
 		//A1和A2可能会被重排序（除非插入LOADLOAD指令），但是A1、A2和A3都有数据依赖性，处理器和编译器都会保证A1、A2和A3不会重排序
 		int a = 1;	//A1
 		int b = 2;  //A2
+		@SuppressWarnings("unused")
 		int c = a + b;	//A3
 	}
 }

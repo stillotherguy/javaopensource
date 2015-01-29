@@ -36,6 +36,7 @@ public class ReorderTest {
 					 * 曾经天真的以为JDK8已经修复了上述问题，其实没有，是因为看错了逻辑，如果initialCapacity == 0时确实没有上面的问题，
 					 * 因为EMPTY_ELEMENTDATA是一个final类型的依据JMM可以保证，调用add的线程在拿到的arraylist的引用是已经初始化好的
 					 */
+					@SuppressWarnings("unused")
 					List<String> local = l;
 					l = new ArrayList<String>(1024);
 				}

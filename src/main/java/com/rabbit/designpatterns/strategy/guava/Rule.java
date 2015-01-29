@@ -10,6 +10,7 @@ import com.rabbit.designpatterns.strategy.InMessage;
 import com.rabbit.designpatterns.strategy.MsgType;
 import com.rabbit.designpatterns.strategy.OutMessage;
 
+@SuppressWarnings("hiding")
 public class Rule {
 
     private final MessageRouter routerBuilder;

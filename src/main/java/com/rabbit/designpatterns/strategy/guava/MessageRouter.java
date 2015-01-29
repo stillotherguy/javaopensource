@@ -71,7 +71,8 @@ public class MessageRouter {
 			// 只要第一个是异步的，那就异步执行
 			// 在另一个线程里执行
 			es.submit(new Runnable() {
-			    public void run() {
+			    @Override
+				public void run() {
 			    	for (final Rule rule : matchRules) {
 			    		rule.service(inMessage);
 			    		if (!rule.isReEnter()) {

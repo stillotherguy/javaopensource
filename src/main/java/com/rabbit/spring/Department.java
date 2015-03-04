@@ -4,6 +4,8 @@ public class Department {
 
 	private Department parent;
 	private String name;
+	@SuppressWarnings("unused")
+	private int level;
 	
 	public Department getParent() {
 		return parent;
@@ -19,6 +21,10 @@ public class Department {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getLevel() {
+		return level;
 	}
 	
 }

@@ -4,7 +4,6 @@ public class Department {
 
 	private Department parent;
 	private String name;
-	@SuppressWarnings("unused")
 	private int level;
 	
 	public Department getParent() {

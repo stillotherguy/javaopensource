@@ -40,9 +40,9 @@ public class PropertySourceTest {
 	public void testps1() throws IOException {
 		Map<String, Object> map = Maps.newHashMap();
 		map.put("prop1", "value1");
-		PropertySource mapps = new MapPropertySource("mapps", map);
+		PropertySource<?> mapps = new MapPropertySource("mapps", map);
 		Assert.isTrue(mapps.containsProperty("prop1"));
-		PropertySource resourceps = new ResourcePropertySource("resourceps", "classpath:resources.properties");
+		PropertySource<?> resourceps = new ResourcePropertySource("resourceps", "classpath:resources.properties");
 		Assert.isTrue(resourceps.containsProperty("LOG_LEVEL"));
 	}
 	
@@ -50,9 +50,9 @@ public class PropertySourceTest {
 	public void testps2() throws IOException {
 		Map<String, Object> map = Maps.newHashMap();
 		map.put("prop1", "value1");
-		PropertySource mapps = new MapPropertySource("mapps", map);
+		PropertySource<?> mapps = new MapPropertySource("mapps", map);
 		Assert.isTrue(mapps.containsProperty("prop1"));
-		PropertySource resourceps = new ResourcePropertySource("resourceps", "classpath:resources.properties");
+		PropertySource<?> resourceps = new ResourcePropertySource("resourceps", "classpath:resources.properties");
 		Assert.isTrue(resourceps.containsProperty("LOG_LEVEL"));
 		CompositePropertySource cps = new CompositePropertySource("cps");
 		cps.addPropertySource(mapps);
@@ -63,9 +63,9 @@ public class PropertySourceTest {
 	public void testps3() throws IOException {
 		Map<String, Object> map = Maps.newHashMap();
 		map.put("prop1", "value1");
-		PropertySource mapps = new MapPropertySource("mapps", map);
+		PropertySource<?> mapps = new MapPropertySource("mapps", map);
 		Assert.isTrue(mapps.containsProperty("prop1"));
-		PropertySource resourceps = new ResourcePropertySource("resourceps", "classpath:resources.properties");
+		PropertySource<?> resourceps = new ResourcePropertySource("resourceps", "classpath:resources.properties");
 		Assert.isTrue(resourceps.containsProperty("LOG_LEVEL"));
 		MutablePropertySources mps = new MutablePropertySources();
 		mps.addFirst(mapps);
@@ -77,9 +77,9 @@ public class PropertySourceTest {
 	public void testps4() throws IOException {
 		Map<String, Object> map = Maps.newHashMap();
 		map.put("prop1", "value1");
-		PropertySource mapps = new MapPropertySource("mapps", map);
+		PropertySource<?> mapps = new MapPropertySource("mapps", map);
 		Assert.isTrue(mapps.containsProperty("prop1"));
-		PropertySource resourceps = new ResourcePropertySource("resourceps", "classpath:resources.properties");
+		PropertySource<?> resourceps = new ResourcePropertySource("resourceps", "classpath:resources.properties");
 		Assert.isTrue(resourceps.containsProperty("LOG_LEVEL"));
 		MutablePropertySources mps = new MutablePropertySources();
 		mps.addFirst(mapps);

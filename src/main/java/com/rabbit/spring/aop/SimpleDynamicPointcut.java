@@ -15,7 +15,7 @@ public class SimpleDynamicPointcut extends DynamicMethodMatcherPointcut {
 
 	 public ClassFilter getClassFilter() {
 	    return new ClassFilter() {
-	      public boolean matches(Class cls) {
+	      public boolean matches(Class<?> cls) {
 	        return (cls == MyClass.class);
 	      }
 	    };

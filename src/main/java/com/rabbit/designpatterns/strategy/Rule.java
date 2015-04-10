@@ -1,4 +1,4 @@
-package com.rabbit.designpatterns.strategy.guava;
+package com.rabbit.designpatterns.strategy;
 
 import java.util.List;
 
@@ -6,9 +6,6 @@ import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Lists;
-import com.rabbit.designpatterns.strategy.InMessage;
-import com.rabbit.designpatterns.strategy.MsgType;
-import com.rabbit.designpatterns.strategy.OutMessage;
 
 @SuppressWarnings("hiding")
 public class Rule {

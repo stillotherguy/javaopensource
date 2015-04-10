@@ -1,12 +1,9 @@
-package com.rabbit.designpatterns.strategy.guava;
+package com.rabbit.designpatterns.strategy;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-import com.rabbit.designpatterns.strategy.InMessage;
-import com.rabbit.designpatterns.strategy.OutMessage;
 
 /**
  * <pre>

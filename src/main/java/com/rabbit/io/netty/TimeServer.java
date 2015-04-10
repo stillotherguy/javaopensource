@@ -1,6 +1,4 @@
-package com.rabbit.io.netty.server;
-
-import com.rabbit.io.netty.TimeServerHandler;
+package com.rabbit.io.netty;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

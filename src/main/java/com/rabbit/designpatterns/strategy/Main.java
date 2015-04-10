@@ -1,4 +1,4 @@
-package com.rabbit.designpatterns.strategy.java8;
+package com.rabbit.designpatterns.strategy;
 
 import java.util.ArrayList;
 import java.util.List;

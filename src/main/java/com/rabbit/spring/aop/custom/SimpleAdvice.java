@@ -1,4 +1,4 @@
-package com.rabbit.spring.aop;
+package com.rabbit.spring.aop.custom;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;

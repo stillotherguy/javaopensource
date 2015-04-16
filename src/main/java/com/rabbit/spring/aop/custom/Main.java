@@ -1,4 +1,4 @@
-package com.rabbit.spring.aop;
+package com.rabbit.spring.aop.custom;
 
 import org.springframework.aop.Advisor;
 import org.springframework.aop.framework.ProxyFactory;

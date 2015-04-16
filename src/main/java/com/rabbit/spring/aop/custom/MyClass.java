@@ -1,4 +1,4 @@
-package com.rabbit.spring.aop;
+package com.rabbit.spring.aop.custom;
 
 public class MyClass {
 	public void foo(int x) {

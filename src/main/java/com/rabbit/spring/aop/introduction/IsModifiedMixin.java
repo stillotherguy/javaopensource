@@ -33,7 +33,7 @@ public class IsModifiedMixin extends DelegatingIntroductionInterceptor implement
 
                 if (getter != null) {
                     Object newVal = invocation.getArguments()[0];
-                    Object oldVal = getter.invoke(invocation.getThis(), null);
+                    Object oldVal = getter.invoke(invocation.getThis(), (Object[]) null);
                     
                     if((newVal == null) && (oldVal == null)) {
                         isModified = false;
@@ -53,10 +53,7 @@ public class IsModifiedMixin extends DelegatingIntroductionInterceptor implement
     }
 
     private Method getGetter(Method setter) {
-        Method getter = null;
-
-        // attempt cache retrieval.
-        getter = methodCache.get(setter);
+        Method getter = methodCache.get(setter);
 
         if (getter != null) {
             return getter;

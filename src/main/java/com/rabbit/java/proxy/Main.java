@@ -7,17 +7,22 @@ import java.lang.reflect.Proxy;
 public class Main {
 
 	public static void main(String[] args) {
-		Object obj = Proxy.newProxyInstance(Main.class.getClassLoader(), new Class[]{EchoService.class}, new IncationHandler1());
-		Object obj2 = Proxy.newProxyInstance(Main.class.getClassLoader(), new Class[]{EchoService.class}, new IncationHandler2());
-		System.out.println(obj.getClass());
+		EchoService es = new EchoServiceImpl();
+		EchoService obj = (EchoService) Proxy.newProxyInstance(Main.class.getClassLoader(), new Class[]{EchoService.class}, new IncationHandler1(es));
+		obj.echo();
 	}
 	
 	private static class IncationHandler1 implements InvocationHandler {
-
+		private Object proxy;
+		
+		public IncationHandler1(Object proxy) {
+			this.proxy = proxy;
+		}
+		
 		@Override
 		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-			System.out.println("proxy1");
-			method.invoke(proxy, args);
+			System.out.println(proxy.getClass());
+			method.invoke(this.proxy, args);
 			return null;
 		}
 		

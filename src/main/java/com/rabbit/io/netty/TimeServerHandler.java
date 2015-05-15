@@ -32,6 +32,7 @@ public class TimeServerHandler extends ByteToMessageDecoder {
 	@Override
 	protected void decode(ChannelHandlerContext ctx, ByteBuf bytes, List<Object> out)
 			throws Exception {
+		System.out.println(ctx.channel().remoteAddress());
 		System.out.println(bytes.readableBytes());
 		if(bytes.isReadable(4)) {
 			byte[] content = new byte[4];

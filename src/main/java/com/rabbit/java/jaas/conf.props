@@ -1,0 +1,4 @@
+MyApp {
+    com.rabbit.java.jaas.PropertiesFileBasedLoginModule required
+    properties.file.path=""
+}

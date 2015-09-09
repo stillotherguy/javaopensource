@@ -34,7 +34,7 @@ public class TimeServerHandler extends ByteToMessageDecoder {
 			throws Exception {
 		System.out.println(ctx.channel().remoteAddress());
 		System.out.println(bytes.readableBytes());
-		if(bytes.isReadable(4)) {
+		/*if(bytes.isReadable(4)) {
 			byte[] content = new byte[4];
 			bytes.readBytes(content);
 			String str = new String(content);
@@ -44,6 +44,14 @@ public class TimeServerHandler extends ByteToMessageDecoder {
 				time.writeInt((int) (System.currentTimeMillis() / 1000L + 2208988800L));
 				ctx.writeAndFlush(time);
 			}
-		}
+		}*/
 	}
+
+
+
+	@Override
+	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+		super.channelInactive(ctx);
+	}
+	
 }

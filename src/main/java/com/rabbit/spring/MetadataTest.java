@@ -5,6 +5,7 @@ package com.rabbit.spring;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.function.Consumer;
 
 import org.junit.Test;
 import org.springframework.core.io.Resource;
@@ -19,6 +20,8 @@ import org.springframework.core.type.filter.AssignableTypeFilter;
 import org.springframework.util.AntPathMatcher;
 
 import com.google.common.base.Optional;
+import com.google.common.reflect.ClassPath;
+import com.google.common.reflect.ClassPath.ClassInfo;
 
 /**
  * @author Ethan
@@ -58,5 +61,16 @@ public class MetadataTest {
 				System.out.println(r.getFilename());
 			}
 		}
+	}
+	
+	@Test
+	public void guava() throws IOException {
+		ClassPath.from(Thread.currentThread().getContextClassLoader()).getAllClasses().forEach(new Consumer<ClassInfo>() {
+
+			@Override
+			public void accept(ClassInfo t) {
+				
+			}
+		});;
 	}
 }

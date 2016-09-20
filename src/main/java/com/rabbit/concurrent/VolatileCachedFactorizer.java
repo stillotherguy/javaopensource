@@ -22,14 +22,14 @@ public class VolatileCachedFactorizer extends GenericServlet {
 	
 	@Override
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-		BigInteger i = null;//extractFromRequest(req);
+		BigInteger i = extractFromRequest(req);
 		BigInteger[] factors = cache.getFactors(i);
 		if(factors == null) {
-			factors = null;//factor(i);
+			factors = factor(i);
 			cache = new OneValueCache(i, factors);  //这一步利用了volatile获取语义以及不可变对象来确保线程安全和可见性
 		}
 		
-		//encodeIntoResponse(res, factors);
+		encodeIntoResponse(res, factors);
 	}
 	
 	private static final class OneValueCache {
